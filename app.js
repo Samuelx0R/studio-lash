@@ -1,4 +1,10 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // Reset scroll position on load to prevent browser from hiding the hero section
+    if (history.scrollRestoration) {
+        history.scrollRestoration = 'manual';
+    }
+    window.scrollTo(0, 0);
+
     // 0. Scroll Reveal Animations (A Mágica acontece aqui!)
     const revealElements = document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale');
     
