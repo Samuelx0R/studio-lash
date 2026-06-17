@@ -399,7 +399,7 @@ span.text-gold-gradient {
 .contact { padding: 60px 0 90px; background: var(--pink-50);}
 
 .contact-card {
-  background: linear-gradient(135deg, var(--pink-100), var(--pink-300));
+  background: linear-gradient(135deg, var(--pink-300), var(--pink-600));
   border-radius: 40px; padding: 60px 30px; text-align: center; color: white;
   box-shadow: 0 40px 80px rgba(0,0,0,0.2); position: relative; overflow: hidden;
   transition: transform 0.4s ease;
