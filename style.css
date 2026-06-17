@@ -394,12 +394,12 @@ span.text-gold-gradient {
 /* HIGHLIGHT CTA SECTION                     */
 /* ========================================= */
 .highlight-cta {
-  background: linear-gradient(135deg, var(--pink-400), var(--pink-700));
+  background: linear-gradient(135deg, var(--pink-300), var(--pink-600));
   position: relative; overflow: hidden;
 }
 
 .cta-container {
-  display: grid; grid-template-columns: 1fr 1.5fr; align-items: center; gap: 50px;
+  display: grid; grid-template-columns: 1.5fr 1fr; align-items: center; gap: 50px;
 }
 
 .cta-image-wrapper {
