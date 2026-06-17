@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Studio Júlia Radael</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="site-wrapper">
+  <nav class="navbar">
+    <div class="container nav-content">
+      <a href="index.html" class="brand-logo">
+        <span class="logo-title">Júlia Radael</span>
+        <span class="logo-subtitle">Cílios e Estética</span>
+      </a>
+
+      <div class="nav-links desktop-only">
+        <a href="#hero" class="nav-link-premium">Início</a>
+        <a href="#instagram" class="nav-link-premium">Instagram</a>
+        <a href="#about" class="nav-link-premium">Sobre Mim</a>
+        <a href="#contact" class="nav-link-premium">Contato</a>
+        <a href="#location" class="nav-link-premium">Localização</a>
+      </div>
+
+      <button id="mobile-menu-toggle" class="menu-btn mobile-only">
+        <div class="hamburger">
+          <span class="line"></span>
+          <span class="line"></span>
+          <span class="line"></span>
+        </div>
+      </button>
+    </div>
+
+    <div id="mobile-navigation-menu" class="mobile-menu hidden">
+      <a href="#hero" class="mobile-link">Início</a>
+      <a href="#instagram" class="mobile-link">Instagram</a>
+      <a href="#about" class="mobile-link">Sobre Mim</a>
+      <a href="#contact" class="mobile-link">Contato</a>
+      <a href="#location" class="mobile-link">Localização</a>
+    </div>
+  </nav>
+
+  <section class="hero" id="hero">
+    <div class="container hero-container">
+      <div class="hero-text">
+        <h2 class="hero-title reveal">
+          <span class="text-dark">A Lash de quem</span>
+          <span class="text-gold-gradient">procura um olhar inesquecível!</span>
+        </h2>
+        <p class="hero-description reveal delay-100">
+          <strong class="text-pink">Exclusividade</strong>, personalização, cuidado e <strong class="text-pink">atenção aos detalhes</strong> para realçar sua beleza com naturalidade e sofisticação.
+        </p>
+        
+      </div>
+
+      <div class="hero-image-wrapper reveal-scale delay-200">
+          <img src="/img/julia-radael.png" alt="Júlia Radael" class="main-photo float-anim">
+
+          <div class="quote-card reveal-left delay-400">
+            <p class="quote">"<b>VOCÊ</b> é seu projeto mais importante."</p>
+            <p class="author">- Júlia Radael</p>
+          </div>
+        </div>
+      
+      <div class="hero-button-wrapper text-center reveal delay-300">
+        <a href="#contact" class="btn-primary">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.888-.788-1.489-1.761-1.663-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg> Falar no WhatsApp
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <div class="divisor-sorveteria"></div>
+
+  <section class="instagram" id="instagram">
+    <div class="container text-center">
+      <div class="section-badge reveal">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-instagram"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg> @studiojuliaradael
+      </div>
+      <h3 class="section-title reveal delay-100">
+        Galeria do Nosso <span class="highlight-gold">Instagram</span>
+      </h3>
+
+      <div class="carousel-container reveal delay-200">
+        <button id="btn-prev" class="carousel-btn left"><i data-lucide="chevron-left"></i></button>
+        <button id="btn-next" class="carousel-btn right"><i data-lucide="chevron-right"></i></button>
+        
+        <div class="carousel-track" id="carousel-track">
+           </div>
+        
+        <div class="carousel-dots" id="carousel-dots"></div>
+      </div>
+
+      <div class="reveal delay-300">
+        <a href="https://www.instagram.com/studiojuliaradael/" target="_blank" class="btn-outline">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-instagram" style="margin-right: 8px;"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg> Abra nosso Instagram
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="about" id="about">
+    <div class="container about-container">
+      <div class="about-image-wrapper reveal-right">
+        <img src="/img/julia-radael-2.png" alt="Lash Designer" class="about-photo float-anim">
+        <div class="certificate-badge reveal-scale delay-300">
+          <div class="icon-circle"><i data-lucide="award"></i></div>
+          <div class="badge-text">
+            <strong>Lash Certificada</strong>
+            <span>Procedimento livre de dor</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="about-text reveal-left delay-100">
+        <div class="subtitle">Conheça-me!</div>
+        <h3 class="section-title">Olá, eu sou a <span class="text-pink">Júlia Radael</span>! Sua especialista em realçar o olhar.</h3>
+        <hr class="divider">
+        <p>Minha missão é traduzir a força e a personalidade de cada cliente em um <b>olhar marcante e exuberante</b>. Com anos de dedicação ao universo dos cílios e estética facial premium, especializei-me nas técnicas mais modernas e confortáveis do mercado de Lash Design.</p>
+
+        <div class="signature">
+          <span class="sign-name">Júlia Radael</span>
+          <span class="sign-role">Fundadora & Lash Artist</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="highlight-cta" id="contact">
+    <div class="container cta-container">
+      <div class="cta-image-wrapper reveal-right">
+        <img src="/img/Proprietaria.png" alt="Júlia Radael" class="cta-photo">
+      </div>
+      <div class="cta-content reveal-left delay-100">
+        <h3 class="card-title text-white">Destaque ainda mais a sua Beleza!</h3>
+        <p class="card-desc text-white">Estamos a um clique de distância. Clique no botão abaixo para iniciar uma conversa diretamente no nosso WhatsApp.</p>
+        <a href="https://api.whatsapp.com/send/?phone=5532984404429&text&type=phone_number&app_absent=0" target="_blank" class="btn-whatsapp pulse-btn" style="display: inline-flex; width: auto; margin-top: 15px;">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.888-.788-1.489-1.761-1.663-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg> Chamar no WhatsApp 
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="location" id="location">
+    <div class="golden-bar"></div>
+    <div class="container footer-container">
+      <div class="location-info reveal-left">
+        <h3 class="section-title text-white">Venha me visitar e ter seu <span class="highlight-gold-text">momento EXCLUSIVO</span> !</h3>
+        
+        <div class="contact-details">
+          <div class="contact-item reveal delay-100">
+            <i data-lucide="map-pin"></i>
+            <div>
+              <strong>Praça Nelson Simão, n° 21</strong>
+              <span>Vila Alta - Alegre, ES</span>
+              <p style="font-size: 10px; color: var(--pink-300);">Final da rua do Norte, próximo à bomba d’água do SAAE</p>
+            </div>
+          </div>
+          <div class="contact-item reveal delay-200">
+            <i data-lucide="phone"></i> <strong>+55 (32) 98440-4429</strong>
+          </div>
+        </div>
+      </div>
+
+      <div class="map-wrapper reveal-right delay-200">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d29843.407176224584!2d-41.56146858880633!3d-20.77405093226919!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xbbebe93388f7a5%3A0x72f6ffe12d50015f!2sServi%C3%A7o%20Aut%C3%B4nomo%20de%20%C3%81gua%20e%20Esgoto!5e0!3m2!1spt-BR!2sbr!4v1781399594554!5m2!1spt-BR!2sbr" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom reveal">
+      <h2>JÚLIA RADAEL</h2>
+      <p>© 2026 Studio Júlia Radael - Cílios e Estética. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+</div>
+
+  <script src="app.js"></script>
+</body>
+</html>
