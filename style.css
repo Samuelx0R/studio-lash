@@ -250,8 +250,6 @@ span.text-gold-gradient {
   transition: transform 0.5s ease;
 }
 
-.main-photo:hover { transform: translate(-5px, -5px); box-shadow: 30px 30px 0px var(--pink-300); }
-
 .quote-card {
   position: absolute; bottom: 40px; left: -40px;
   background: rgba(255, 255, 255, 0.95);
@@ -370,7 +368,6 @@ span.text-gold-gradient {
   box-shadow: -25px 25px 0px var(--gold-300);
   transition: transform 0.5s ease;
 }
-.about-photo:hover { transform: translate(5px, -5px); box-shadow: -30px 30px 0px var(--gold-400); }
 
 .about-image-wrapper { position: relative; }
 
