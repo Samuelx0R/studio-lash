@@ -182,7 +182,7 @@ span.text-gold-gradient {
 /* ========================================= */
 /* HERO SECTION                              */
 /* ========================================= */
-.hero { padding: 160px 0 80px; min-height: 90vh; display: flex; flex-direction: column; justify-content: center; align-items: center; background-color: var(--pink-50); position: relative; overflow: hidden; }
+.hero { padding: 120px 0 40px; min-height: 90vh; display: flex; flex-direction: column; justify-content: center; align-items: center; background-color: var(--pink-50); position: relative; overflow: hidden; }
 
 .hero-container {
   display: grid; grid-template-columns: 1.1fr 1fr; gap: 60px; align-items: center;
@@ -277,6 +277,9 @@ span.text-gold-gradient {
 /* ========================================= */
 /* SEÇÕES GERAIS                             */
 /* ========================================= */
+.instagram { padding: 40px 0; }
+.about { padding: 40px 0 50px; background: #fff; }
+
 .section-badge {
   display: inline-flex; align-items: center; gap: 8px;
   color: var(--pink-600); font-size: 14px; font-weight: 800;
@@ -393,7 +396,7 @@ span.text-gold-gradient {
 /* ========================================= */
 /* CONTACT SECTION                           */
 /* ========================================= */
-.contact { padding: 120px 0; background: #fff;}
+.contact { padding: 60px 0 90px; background: #fff;}
 
 .contact-card {
   background: linear-gradient(135deg, var(--pink-300), var(--pink-600));
@@ -519,9 +522,9 @@ span.text-gold-gradient {
   .hero-button-wrapper { order: 3; margin-top: 40px; margin-bottom: 10px; }
   .hero-description { order: 4; margin: 0 auto 10px auto; font-size: 15px; max-width: 500px; padding: 0 15px; line-height: 1.7; }
   
-  .instagram { padding: 60px 0; }
-  .about { padding: 70px 0 80px; }
-  .contact { padding: 80px 0 100px; }
+  .instagram { padding: 30px 0; }
+  .about { padding: 40px 0 50px; }
+  .contact { padding: 50px 0 70px; }
   .location { padding-top: 50px; }
   .footer-container { grid-template-columns: 1fr; gap: 50px; margin-bottom: 40px; }
 
