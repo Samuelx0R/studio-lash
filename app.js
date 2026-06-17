@@ -179,6 +179,28 @@ document.addEventListener('DOMContentLoaded', () => {
         if (btnNext) btnNext.addEventListener('click', nextSlide);
         if (btnPrev) btnPrev.addEventListener('click', prevSlide);
 
+        // Touch events for drag
+        let touchStartX = 0;
+        let touchEndX = 0;
+
+        track.addEventListener('touchstart', e => {
+            touchStartX = e.changedTouches[0].screenX;
+        }, {passive: true});
+
+        track.addEventListener('touchend', e => {
+            touchEndX = e.changedTouches[0].screenX;
+            handleGesture();
+        }, {passive: true});
+
+        function handleGesture() {
+            if (touchEndX < touchStartX - 40) {
+                nextSlide();
+            }
+            if (touchEndX > touchStartX + 40) {
+                prevSlide();
+            }
+        }
+
         initCarousel();
         setInterval(nextSlide, 5000); // Roda automático a cada 5s
     }
