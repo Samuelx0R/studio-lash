@@ -202,7 +202,7 @@ span.text-gold-gradient {
 }
 
 .hero-title span { display: block; }
-.hero-title .text-dark { font-size: 0.65em; margin-bottom: 5px; }
+.hero-title .text-dark { font-size: 0.85em; margin-bottom: 5px; }
 .hero-title .text-gold-gradient { font-size: 1.15em; line-height: 1.1; }
 
 .hero-description {
@@ -391,31 +391,26 @@ span.text-gold-gradient {
 .sign-role { font-size: 10px; text-transform: uppercase; color: var(--slate-500); font-weight: 800; letter-spacing: 2px;}
 
 /* ========================================= */
-/* HIGHLIGHT CTA SECTION                     */
+/* CONTACT SECTION                           */
 /* ========================================= */
-.highlight-cta {
+.contact { padding: 70px 0; background: #fff;}
+
+.contact-card {
   background: linear-gradient(135deg, var(--pink-300), var(--pink-600));
-  position: relative; overflow: hidden;
+  border-radius: 30px; padding: 60px 30px; text-align: center; color: white;
+  box-shadow: 0 40px 80px rgba(0,0,0,0.2); position: relative; overflow: hidden;
+  transition: transform 0.4s ease;
 }
 
-.cta-container {
-  display: flex; flex-direction: column; align-items: center; justify-content: center;
+.contact-card:hover { transform: translateY(-10px); }
+
+.contact-card::before {
+  content: ''; position: absolute; top: -50%; left: -50%; width: 200%; height: 200%;
+  background: radial-gradient(circle, rgba(219,63,91,0.2) 0%, transparent 60%); pointer-events: none;
 }
 
-.cta-image-wrapper {
-  display: flex; justify-content: center; align-items: flex-end; height: 100%;
-}
-
-.cta-photo {
-  max-width: 100%; height: auto; max-height: 500px;
-  object-fit: cover; object-position: top;
-  border-radius: 20px 20px 0 0;
-}
-
-.cta-content { padding: 80px 0; }
 .card-title { font-family: var(--font-serif); font-size: 46px; font-weight: 400; margin-bottom: 20px; position: relative; z-index: 1;}
-.cta-content .card-title { color: #fff; }
-.cta-content .card-desc { font-size: 18px; margin-bottom: 20px; color: rgba(255,255,255,0.9); max-width: 500px; }
+.card-desc { font-size: 16px; margin-bottom: 30px; color: rgba(255,255,255,0.9); max-width: 500px; margin-left: auto; margin-right: auto; line-height: 1.8; position: relative; z-index: 1;}
 
 .btn-whatsapp {
   position: relative; z-index: 1; display: inline-flex; align-items: center; justify-content: center; gap: 12px;
@@ -525,13 +520,8 @@ span.text-gold-gradient {
   .hero-description { order: 4; margin: 0 auto 10px auto; font-size: 15px; max-width: 500px; padding: 0 15px; line-height: 1.7; }
   
   .instagram { padding: 60px 0; }
-  .highlight-cta { padding: 0; }
-  .cta-container { grid-template-columns: 1fr; gap: 20px; text-align: center; }
-  .cta-content { padding: 40px 20px; }
-  .cta-image-wrapper { margin-top: 40px; }
-  .cta-photo { max-height: 350px; border-radius: 500px 500px 0 0; }
-  .cta-content .card-desc { margin: 0 auto 20px auto; }
-  
+  .about { padding: 70px 0 80px; }
+  .contact { padding: 40px 0 60px; }
   .location { padding-top: 50px; }
   .footer-container { grid-template-columns: 1fr; gap: 50px; margin-bottom: 40px; }
 
@@ -561,6 +551,9 @@ span.text-gold-gradient {
     width: 90%; justify-content: center; 
     box-shadow: 0 10px 25px rgba(0,0,0,0.2);
   }
+
+  .contact-card { padding: 50px 30px; border-radius: 20px; }
+  .card-desc { font-size: 16px; margin-bottom: 30px; }
 
   .contact-item { align-items: flex-start; }
   .contact-item i { padding: 12px; }
