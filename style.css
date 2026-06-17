@@ -399,7 +399,7 @@ span.text-gold-gradient {
 }
 
 .cta-container {
-  display: grid; grid-template-columns: 1.5fr 1fr; align-items: center; gap: 50px;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
 }
 
 .cta-image-wrapper {
