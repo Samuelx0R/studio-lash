@@ -265,20 +265,18 @@ span.text-gold-gradient {
 .quote { font-family: var(--font-serif); font-style: italic; font-size: 16px; color: var(--slate-900);}
 .author { font-size: 10px; text-transform: uppercase; margin-top: 10px; color: var(--pink-600); font-weight: bold; letter-spacing: 2px;}
 
-.divisor-sorveteria {
-  width: 100%; height: 30px;
-  background-image: radial-gradient(circle at 15px 30px, #ffffff 15px, transparent 16px);
-  background-size: 30px 30px;
-  background-repeat: repeat-x;
-  background-color: var(--pink-50);
-  margin-top: -1px; position: relative; z-index: 10;
-}
-
 /* ========================================= */
 /* SEÇÕES GERAIS                             */
 /* ========================================= */
 .instagram { padding: 40px 0; }
-.about { padding: 40px 0 50px; background: #fff; }
+.about { 
+  padding: 60px 0 50px; 
+  background: #fff; 
+  border-radius: 60px 60px 0 0; 
+  box-shadow: 0 -15px 40px rgba(0,0,0,0.02);
+  position: relative;
+  z-index: 5;
+}
 
 .section-badge {
   display: inline-flex; align-items: center; gap: 8px;
@@ -523,7 +521,7 @@ span.text-gold-gradient {
   .hero-description { order: 4; margin: 0 auto 10px auto; font-size: 15px; max-width: 500px; padding: 0 15px; line-height: 1.7; }
   
   .instagram { padding: 30px 0; }
-  .about { padding: 40px 0 50px; }
+  .about { padding: 50px 0 50px; border-radius: 30px 30px 0 0; }
   .contact { padding: 50px 0 70px; }
   .location { padding-top: 50px; }
   .footer-container { grid-template-columns: 1fr; gap: 50px; margin-bottom: 40px; }
