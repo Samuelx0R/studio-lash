@@ -5,6 +5,35 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     window.scrollTo(0, 0);
 
+    // Inicialização do Lenis (Smooth Scroll para PC)
+    const lenis = new Lenis({
+        duration: 1.2,
+        easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+        direction: 'vertical',
+        gestureDirection: 'vertical',
+        smooth: true,
+        smoothTouch: false,
+        touchMultiplier: 2
+    });
+
+    function raf(time) {
+        lenis.raf(time);
+        requestAnimationFrame(raf);
+    }
+
+    requestAnimationFrame(raf);
+
+    // Suporte a links âncora com Lenis
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const target = this.getAttribute('href');
+            if (target && target !== '#') {
+                lenis.scrollTo(target, { offset: -100 });
+            }
+        });
+    });
+
     // 0. Scroll Reveal Animations (A Mágica acontece aqui!)
     const revealElements = document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale');
     
@@ -205,33 +234,41 @@ document.addEventListener('DOMContentLoaded', () => {
         setInterval(nextSlide, 5000); // Roda automático a cada 5s
     }
 
-    // 4. Espião de Rolagem (Scroll Spy) para destacar o menu
+    // 4. Espião de Rolagem (Scroll Spy) Robusto
     const sections = document.querySelectorAll('section, footer');
     const navLinks = document.querySelectorAll('.nav-link-premium, .mobile-link');
 
-    const observerOptions = {
-        root: null,
-        rootMargin: '-40% 0px -40% 0px',
-        threshold: 0 
-    };
+    function updateActiveSection() {
+        let currentSection = null;
 
-    const spyObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                const currentId = entry.target.getAttribute('id');
-                navLinks.forEach(link => {
-                    link.classList.remove('active');
-                    if (link.getAttribute('href') === `#${currentId}`) {
-                        link.classList.add('active');
-                    }
-                });
+        // Itera sobre as seções para descobrir qual está ativa
+        sections.forEach(section => {
+            const rect = section.getBoundingClientRect();
+            // Considera a seção ativa se o topo dela estiver a 150px do topo da tela ou menos
+            // Isso compensa o menu fixo e o offset que colocamos no clique
+            if (rect.top <= 150) {
+                currentSection = section;
             }
         });
-    }, observerOptions);
 
-    sections.forEach(section => {
-        if (section.getAttribute('id')) {
-            spyObserver.observe(section);
+        // Garante que o último item seja marcado se chegarmos no final absoluto da página
+        if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight - 50) {
+            currentSection = document.getElementById('location');
         }
-    });
+
+        if (currentSection) {
+            const currentId = currentSection.getAttribute('id');
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${currentId}`) {
+                    link.classList.add('active');
+                }
+            });
+        }
+    }
+
+    // Ouve o evento de scroll da janela para atualizar
+    window.addEventListener('scroll', updateActiveSection);
+    // Chamada inicial para marcar o item correto assim que a página carregar
+    updateActiveSection();
 });
